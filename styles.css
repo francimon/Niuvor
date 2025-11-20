@@ -1,0 +1,270 @@
+/* Variables de Color */
+:root {
+    --color-blanco: #FFFFFF;
+    --color-azul-electrico: #0033CC; /* Azul Vibrante Oscuro */
+    --color-celeste-electrico: #00CCFF; /* Cian Vibrante Claro */
+    --color-fondo-claro: #F8F8FF; /* Un blanco muy suave */
+    --color-texto-oscuro: #333333;
+}
+
+/* Base y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-blanco);
+    color: var(--color-texto-oscuro);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--color-azul-electrico);
+    text-align: center;
+}
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { color: var(--color-azul-electrico); }
+
+/* --- HEADER y NAV --- */
+header {
+    background: var(--color-azul-electrico);
+    color: var(--color-blanco);
+    padding: 10px 0;
+    position: sticky; /* Sticky Nav para mejor UX */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-celeste-electrico);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--color-celeste-electrico);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    background: linear-gradient(135deg, var(--color-azul-electrico) 0%, var(--color-celeste-electrico) 100%);
+    color: var(--color-blanco);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    color: var(--color-blanco);
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: var(--color-blanco);
+    color: var(--color-azul-electrico);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-celeste-electrico);
+    color: var(--color-blanco);
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.services {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--color-fondo-claro);
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 51, 204, 0.1); /* Sombra azul sutil */
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 51, 204, 0.2);
+}
+
+/* --- SECCIÓN POR QUÉ NIUVOR --- */
+.why-us {
+    padding: 60px 0;
+    background-color: var(--color-blanco);
+    text-align: center;
+}
+
+.why-us ul {
+    list-style: none;
+    text-align: left;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.why-us ul li {
+    background-color: var(--color-fondo-claro);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-left: 5px solid var(--color-celeste-electrico);
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.contact {
+    padding: 60px 0;
+    background-color: var(--color-celeste-electrico);
+    color: var(--color-texto-oscuro);
+    text-align: center;
+}
+
+.contact h3 {
+    color: var(--color-azul-electrico);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn-submit {
+    background-color: var(--color-azul-electrico);
+    color: var(--color-blanco);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #001A66; /* Azul más oscuro */
+}
+
+/* Mensaje de formulario */
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--color-azul-electrico);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-azul-electrico);
+    color: var(--color-fondo-claro);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        margin: 0 5px;
+        padding: 5px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .service-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+        min-width: 90%;
+    }
+}
